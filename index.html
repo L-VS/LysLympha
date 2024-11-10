@@ -1,95 +1,43 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bien-être et Massage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Quel massage est fait pour vous ?</h1>
+    </header>
+    
+    <section class="questionnaire">
+        <form id="form" class="form">
+            <label for="question1">Comment vous sentez-vous aujourd'hui ?</label>
+            <select id="question1">
+                <option value="fatigue">Fatigué(e)</option>
+                <option value="stress">Stressé(e)</option>
+                <option value="détente">Détendu(e)</option>
+            </select>
+            
+            <button type="button" class="btn-next" onclick="nextQuestion()">Suivant</button>
+        </form>
+    </section>
+    
+    <section id="result" class="hidden">
+        <h2>Voici le massage qui vous convient :</h2>
+        <div id="massage-type">
+            <img src="massage_image.jpg" alt="Massage recommandé">
+            <p>Massage drainant lymphatique</p>
+        </div>
+        <button class="btn-reserve" onclick="reserveSession()">Réserver une séance</button>
+    </section>
 
-header {
-    text-align: center;
-    background-color: #87CEEB;
-    padding: 20px;
-}
+    <footer>
+        <p>&copy; 2024 Bien-être et Massage</p>
+    </footer>
 
-.logo {
-    width: 100px;
-    border-radius: 50%;
-}
-
-h1 {
-    font-size: 2em;
-    color: #333;
-}
-
-.questionnaire {
-    padding: 30px;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-select {
-    padding: 10px;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-button {
-    padding: 15px 30px;
-    border: none;
-    background: linear-gradient(45deg, #32CD32, #228B22);
-    color: white;
-    border-radius: 30px;
-    font-size: 16px;
-    cursor: pointer;
-    outline: none;
-    position: relative;
-    overflow: hidden;
-    transition: background 0.4s ease, transform 0.4s ease;
-}
-
-button:hover {
-    background: linear-gradient(45deg, #228B22, #32CD32);
-    transform: scale(1.05);
-}
-
-button:before {
-    content: '';
-    position: absolute;
-    top: -150%;
-    left: -150%;
-    width: 300%;
-    height: 300%;
-    background: rgba(255, 255, 255, 0.2);
-    transition: all 0.5s;
-}
-
-button:hover:before {
-    top: 0;
-    left: 0;
-}
-
-.hidden {
-    display: none;
-}
-
-#result {
-    text-align: center;
-    padding: 30px;
-}
-
-#massage-type img {
-    width: 200px;
-    border-radius: 50%;
-}
-
-footer {
-    text-align: center;
-    background-color: #87CEEB;
-    padding: 10px;
-}
-
+    <script src="script.js"></script>
+</body>
+</html>
