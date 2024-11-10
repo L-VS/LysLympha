@@ -1,100 +1,125 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Dégradé de fond */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #e0f7fa, #80deea);
-  color: #333;
-  line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
 }
 
-/* Header */
 header {
-  text-align: center;
-  padding: 20px;
-  background: #004d40;
-  color: #fff;
+    background-color: #3a86ff;
+    padding: 20px;
+    text-align: center;
+    color: white;
 }
 
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
+header .logo {
+    max-width: 150px;
 }
 
-header p {
-  font-size: 1.2em;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Services */
-#services {
-  max-width: 800px;
-  margin: 20px auto;
-  text-align: center;
+nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-.service-card {
-  background: #ffffff;
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.service-card h3 {
-  color: #00796b;
+nav ul li a:hover {
+    color: #ffbe0b;
 }
 
-.service-card p {
-  color: #616161;
+/* Section Hero */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    color: #3a86ff;
 }
 
-.price {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #00796b;
+/* Cards Massage */
+.massages .massage-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.reserve-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #ffffff;
-  background-color: #00796b;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.reserve-btn:hover {
-  background-color: #004d40;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact */
-#contact {
-  background: #eeeeee;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 20px auto;
-  max-width: 800px;
-  text-align: center;
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3a86ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
-#contact ul {
-  list-style: none;
+.card a:hover {
+    background-color: #ffbe0b;
 }
 
-#contact a {
-  color: #00796b;
-  text-decoration: none;
+/* Map */
+.map-container {
+    margin-top: 20px;
+    text-align: center;
 }
 
-#contact a:hover {
-  text-decoration: underline;
+.map-container img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    transition: opacity 0.3s;
+}
+
+.map-container img:hover {
+    opacity: 0.8;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+}
+
+.contact a {
+    color: #3a86ff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #3a86ff;
+    padding: 20px;
+    text-align: center;
+    color: white;
 }
