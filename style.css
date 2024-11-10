@@ -1,125 +1,74 @@
-/* Dégradé de fond */
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
 }
 
 header {
-    background-color: #3a86ff;
+    text-align: center;
+    background-color: #87CEEB;
     padding: 20px;
-    text-align: center;
-    color: white;
 }
 
-header .logo {
-    max-width: 150px;
+.logo {
+    width: 100px;
+    border-radius: 50%;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+h1 {
+    font-size: 2em;
+    color: #333;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffbe0b;
-}
-
-/* Section Hero */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    color: #3a86ff;
-}
-
-/* Cards Massage */
-.massages .massage-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card {
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    width: 250px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #3a86ff;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-}
-
-.card a:hover {
-    background-color: #ffbe0b;
-}
-
-/* Map */
-.map-container {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.map-container img {
-    width: 80%;
-    max-width: 600px;
-    border-radius: 12px;
-    transition: opacity 0.3s;
-}
-
-.map-container img:hover {
-    opacity: 0.8;
-}
-
-/* Contact Section */
-.contact {
-    background-color: #f9f9f9;
+.questionnaire {
     padding: 30px;
     text-align: center;
 }
 
-.contact a {
-    color: #3a86ff;
-    text-decoration: none;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contact a:hover {
-    text-decoration: underline;
+select {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
 }
 
-/* Footer */
-.footer {
-    background-color: #3a86ff;
-    padding: 20px;
-    text-align: center;
+button {
+    padding: 15px;
+    border: none;
+    background-color: #32CD32;
     color: white;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #228B22;
+}
+
+.hidden {
+    display: none;
+}
+
+#result {
+    text-align: center;
+    padding: 30px;
+}
+
+#massage-type img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    background-color: #87CEEB;
+    padding: 10px;
 }
