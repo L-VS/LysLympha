@@ -1,17 +1,9 @@
-// Animation d'entrée de page
-window.addEventListener("load", () => {
-    const hero = document.querySelector('.hero');
-    hero.style.opacity = 1;
-    hero.style.transition = 'opacity 1s ease';
-});
+function nextQuestion() {
+    // Simuler un changement de question ou une animation
+    document.querySelector('.questionnaire').style.display = 'none';
+    document.querySelector('#result').style.display = 'block';
+}
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+function reserveSession() {
+    alert("Réservation effectuée !");
+}
