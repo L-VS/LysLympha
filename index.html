@@ -3,85 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massages Lympho-Drainants</title>
+    <title>Bien-être et Massage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <img src="logo.png" alt="Logo de l'entreprise" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#massages">Massages</a></li>
-                <li><a href="#reservations">Réservations</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Quel massage est fait pour vous ?</h1>
     </header>
-
-    <!-- Section Accueil -->
-    <section id="home" class="hero">
-        <h1>Bienvenue chez Lympho-Drainant</h1>
-        <p>Massages lympho-drainants et soins fibromyalgie par une infirmière spécialisée.</p>
+    
+    <section class="questionnaire">
+        <form id="form" class="form">
+            <label for="question1">Comment vous sentez-vous aujourd'hui ?</label>
+            <select id="question1">
+                <option value="fatigue">Fatigué(e)</option>
+                <option value="stress">Stressé(e)</option>
+                <option value="détente">Détendu(e)</option>
+            </select>
+            
+            <button type="button" class="btn-next" onclick="nextQuestion()">Suivant</button>
+        </form>
     </section>
-
-    <!-- Section Massages -->
-    <section id="massages" class="massages">
-        <h2>Nos Massages</h2>
-        <div class="massage-cards">
-            <div class="card">
-                <h3>Lympha-Court</h3>
-                <p>Durée: 60 min - 50€</p>
-                <a href="https://lys-lymphea.reservio.com/booking?step=2&serviceId=96b29022-9093-41f4-a9e9-d2f9b5179b7d&resourceId=anyone-available">Réserver</a>
-            </div>
-            <div class="card">
-                <h3>Lympha-Long</h3>
-                <p>Durée: 90 min - 90€</p>
-                <a href="https://lys-lymphea.reservio.com/booking?step=2&serviceId=96b29022-9093-41f4-a9e9-d2f9b5179b7d&resourceId=anyone-available">Réserver</a>
-            </div>
-            <div class="card">
-                <h3>Lymph-Axiom</h3>
-                <p>Durée: 40 min - 37€</p>
-                <a href="https://lys-lymphea.reservio.com/booking?step=2&serviceId=6f885c6f-19fb-4317-afc6-0f4497203689&resourceId=anyone-available">Réserver</a>
-            </div>
-            <div class="card">
-                <h3>Massage Fibromyalgie</h3>
-                <p>Durée: 60 min - 65€</p>
-                <a href="https://lys-lymphea.reservio.com/booking?step=2&serviceId=d9b0bb9a-30b4-414e-98f0-a8f49edaf5a6&resourceId=anyone-available">Réserver</a>
-            </div>
+    
+    <section id="result" class="hidden">
+        <h2>Voici le massage qui vous convient :</h2>
+        <div id="massage-type">
+            <img src="massage_image.jpg" alt="Massage recommandé">
+            <p>Massage drainant lymphatique</p>
         </div>
+        <button class="btn-reserve" onclick="reserveSession()">Réserver une séance</button>
     </section>
 
-    <!-- Section Carte -->
-    <section id="reservations" class="reservations">
-        <h2>Réserver un Massage</h2>
-        <div class="map">
-            <h3>Emplacement</h3>
-            <p>Rue de Lille 86, Halluin, Rdc Maison médicale, porte de droite.</p>
-            <div class="map-container">
-                <img src="carte.png" alt="Carte des protocoles de massage">
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="contact">
-        <h2>Contactez-nous</h2>
-        <p>+33 6 79 73 28 60</p>
-        <p>Facebook: <a href="#">Page Facebook</a></p>
-        <p>Heures d'ouverture:</p>
-        <ul>
-            <li>Lundi-Vendredi: 09:00 – 18:00</li>
-            <li>Samedi-Dimanche: Fermé</li>
-        </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Lympho-Drainant</p>
+    <footer>
+        <p>&copy; 2024 Bien-être et Massage</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
