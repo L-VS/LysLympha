@@ -1,9 +1,10 @@
-function nextQuestion() {
-    // Simuler un changement de question ou une animation
-    document.querySelector('.questionnaire').style.display = 'none';
-    document.querySelector('#result').style.display = 'block';
-}
-
-function reserveSession() {
-    alert("Réservation effectuée !");
-}
+// Exemple d'animation du bouton
+const buttons = document.querySelectorAll('.btn-main');
+buttons.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+        button.style.transform = 'scale(1.1)';
+    });
+    button.addEventListener('mouseleave', () => {
+        button.style.transform = 'scale(1)';
+    });
+});
