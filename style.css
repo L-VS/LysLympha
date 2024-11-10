@@ -1,165 +1,74 @@
-/* Style global du body */
+/* Style de base */
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: white;
-}
-
-/* En-tête du site */
-header {
-    padding: 20px 0;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-}
-
-.logo img {
-    width: 100px;
-    border-radius: 50%;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
+    background: linear-gradient(135deg, #162447, #1f4068);
+    color: #f3f4f6;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    position: relative;
-    padding-bottom: 5px;
-    transition: color 0.3s, border-bottom 0.3s;
-}
-
-nav ul li a:hover {
-    color: #32cd32;
-    border-bottom: 2px solid #32cd32;
-}
-
-/* Sections */
-section {
-    padding: 60px 30px;
+header {
     text-align: center;
-}
-
-/* Accueil */
-.section-home {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-button {
-    padding: 10px 30px;
-    border: none;
-    background: linear-gradient(45deg, #32cd32, #228b22);
-    color: white;
-    border-radius: 30px;
-    font-size: 18px;
-    cursor: pointer;
-    outline: none;
-    transition: background 0.4s ease, transform 0.3s ease;
-}
-
-button:hover {
-    background: linear-gradient(45deg, #228b22, #32cd32);
-    transform: scale(1.05);
-}
-
-/* Services */
-.section-services {
-    background: #f7f7f7;
-    color: #333;
-}
-
-.services-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.service-item {
-    width: 30%;
-    margin: 15px 0;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background-color: rgba(31, 64, 104, 0.9);
 }
 
-.service-item:hover {
-    transform: scale(1.05);
+.logo {
+    width: 120px;
+    border-radius: 50%;
+    animation: fadeIn 2s ease;
 }
 
-/* À propos */
-.section-about {
-    background: #eeeeee;
-    color: #333;
+h1, h2 {
+    margin: 10px 0;
+    color: #f3f4f6;
 }
 
-/* Contact */
-.section-contact {
-    background: #32cd32;
-    color: white;
-}
-
-section input, section textarea {
-    width: 80%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background: #fff;
-}
-
-section button {
-    width: 80%;
-    padding: 15px;
-    background: #228b22;
-    border-radius: 30px;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-/* Footer */
-footer {
+h3 {
+    font-size: 1.8em;
+    color: #6ab2ed;
+    margin-top: 20px;
     text-align: center;
-    background: #1e3c72;
-    padding: 20px 0;
-    color: white;
 }
 
-/* Animation du curseur */
-body {
-    cursor: url('cursor.png'), auto;
+.service-card, .info, .fidelity {
+    background: #ffffff;
+    color: #333;
+    margin: 15px auto;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1.5s ease;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #162447;
+}
+
+.reservio-frame {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    border: none;
+}
+
+footer {
+    background-color: #162447;
+    color: #f3f4f6;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
