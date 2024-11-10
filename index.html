@@ -4,52 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lys Lymphéa - Massage Lympho-drainant</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        /* Style de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #f1f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3e577f, #3e4a7f);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            width: 150px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+
+        /* Section de la carte des services */
+        .services {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .services img {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .service-details {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease-in-out;
+        }
+
+        .service-details h2 {
+            color: #3e4a7f;
+            font-size: 1.8em;
+        }
+
+        .service-details p {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Animation des boutons */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #3e4a7f;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2e3a5f;
+        }
+
+        /* Footer */
+        footer {
+            background: #3e577f;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        /* Animations CSS */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-    <!-- En-tête avec le logo et le nom -->
+
+    <!-- En-tête avec le logo et le titre -->
     <header>
-        <img src="logo.png" alt="Logo Lys Lymphéa" class="logo">
+        <img src="FF02B1D1-2BDC-4BF2-B5CE-35DC1D804633.png" alt="Logo Lys Lymphéa">
         <h1>Lys Lymphéa</h1>
-        <h2>Massage Lympho-drainant</h2>
+        <p>Massage Lympho-drainant par Perrine Verpoort</p>
     </header>
 
-    <!-- Section Carte des protocoles -->
-    <section id="services">
-        <h3>Carte des Protocoles</h3>
-        <div class="service-card">
-            <h4>Massage Lympha-Court</h4>
-            <p class="price">50 €</p>
+    <!-- Section des services -->
+    <section class="services container">
+        <h2>Nos Services</h2>
+        <p>Découvrez notre carte des massages lympho-drainants adaptés à vos besoins.</p>
+        <img src="carte.png" alt="Carte des services de Lys Lymphéa">
+        
+        <div class="service-details">
+            <h2>Tarifs et Offres</h2>
+            <p>MASSAGE LYMPHA-COURT : 50€</p>
+            <p>MASSAGE LYMPHA-LONG : 90€</p>
+            <p>LYMPH-AXIOM : 37€</p>
+            <p>Formule fidélité Lymph & Moi : 25% à la 6e séance, 45% à la 10e séance.</p>
+            <a href="https://reservio.com" target="_blank" class="btn">Réserver Maintenant</a>
         </div>
-        <div class="service-card">
-            <h4>Massage Lympha-Long</h4>
-            <p class="price">90 €</p>
-        </div>
-        <div class="service-card">
-            <h4>Lymph-Axiom</h4>
-            <p class="price">37 €</p>
-        </div>
-        <p class="info">Protocoles adaptables selon les besoins (ALD), devis sur demande.</p>
-        <p class="fidelity">Lymph & Moi Formule Fidélité : 25% à la 6ème séance, 45% à la 10ème séance.</p>
-    </section>
-
-    <!-- Section pour les réservations -->
-    <section id="reservation">
-        <h3>Réserver une séance</h3>
-        <iframe src="https://reservio.com/YOUR_RESERVIO_URL" frameborder="0" class="reservio-frame"></iframe>
-    </section>
-
-    <!-- Section informations de paiement -->
-    <section id="payment">
-        <h3>Règlement accepté</h3>
-        <p>CB, Paypal, Chèque</p>
     </section>
 
     <!-- Pied de page -->
     <footer>
-        <p>&copy; 2024 Lys Lymphéa - Perrine Verpoort</p>
+        <p>&copy; 2024 Lys Lymphéa. Tous droits réservés. | Paiement par CB, PayPal, Chèque</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
